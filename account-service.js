@@ -1,19 +1,20 @@
 /* ACCOUNT MICRO-SERVICE */
-  
-const express  = require("express");
+const express = require("express") //import express  from "express" (in package.json insert:   "type": "module",);
 const app = express()
 
-const bodyParser = require("body-parser");
-app.use(bodyParser.urlencoded({extended: true})); 
-app.use(bodyParser.json()); 
+//const bodyParser = require("body-parser");
+//app.use(bodyParser.urlencoded({extended: true})); 
+//app.use(bodyParser.json()); 
+//const axios = require("axios");
 
-const axios = require("axios");
+app.use(express.json())
 
 const personsRouter = require("./routes/persons")
 app.use("/api/persons" , personsRouter)
 
 const searchRouter = require("./routes/search")
-app.use("/api",searchRouter)
+app.use("/api", searchRouter)
+
 //const { resetWatchers } = require("nodemon/lib/monitor/watch");
 
 
@@ -27,9 +28,6 @@ app.use("/persons",middleware) //in this way, we limit the use of middleware to 
 /* --------------------------------------------------------------------- */
 
 const PORT  = 5050
-
-var model = require('./account-model'); //TO DEL
-
 
 // app.get("/", middleware, (req, res) => {...}  it is a way to put single middleware for a specific end point
 
