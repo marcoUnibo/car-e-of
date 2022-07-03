@@ -9,10 +9,10 @@ const app = express()
 
 app.use(express.json())
 
-const personsRouter = require("./routes/persons")
+const personsRouter = require("./routes/persons.js")
 app.use("/api/persons" , personsRouter)
 
-const searchRouter = require("./routes/search")
+const searchRouter = require("./routes/search.js")
 app.use("/api", searchRouter)
 
 //const { resetWatchers } = require("nodemon/lib/monitor/watch");
