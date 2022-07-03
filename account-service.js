@@ -1,4 +1,4 @@
-/* ACCOUNT MICRO-SERVICE */
+/* ACCOUNT TRANSPORT-SERVICE */
 const express = require("express") //import express  from "express" (in package.json insert:   "type": "module",);
 const app = express()
 
@@ -14,9 +14,6 @@ app.use("/api/persons" , personsRouter)
 
 const searchRouter = require("./routes/search.js")
 app.use("/api", searchRouter)
-
-//const { resetWatchers } = require("nodemon/lib/monitor/watch");
-
 
 app.use(express.static("public"))
 
