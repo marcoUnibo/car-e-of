@@ -5,10 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+</style>
 </head>
 <body>
     <h1>Homepage</h1>
-    <p>This is a static page <br></p>
-    <p>This is only a proof af a front page<br></p>
+    <h3>These are the list of some api of the account service:</h3>
+    <table>
+        <tr>
+          <th>Description</th>
+          <th>API</th>
+        </tr>
+        <tr>
+          <td>GET all the users with all the information fields</td>
+          <td><a href = "/api/persons/">127.0.0.1:5050/api/persons/</a></td>
+        </tr>
+        <tr>
+          <td>GET all the users with a part of the information fileds</td>
+          <td><a href = "/api/persons/sort">127.0.0.1:5050/api/persons/sort</a></td>
+        </tr>
+        <tr>
+          <td>GET a single users by the fiend ID</td>
+          <td><a href = "/api/persons/139284">127.0.0.1:5050api/persons/139284</a></td>
+        </tr>
+        <tr>
+          <td>GET a list of users with ID field start with "12"</td>
+          <td><a href = "/api/searchPersonId/?query=12">127.0.0.1:5050/api/searchPersonId/?query=12</a></td>
+        </tr>
+        <tr>
+          <td>GET a list of users with surname field start with "B"</td>
+          <td><a href = "/api/searchPersonSurname/?query=B">127.0.0.1:5050/api/searchPersonSurname/?query=B</a></td>
+        </tr>
+        <tr>
+          <td>GET a list of users with role field starts with "wel"</td>
+          <td><a href = "/api/searchPersonRole/?query=wel">127.0.0.1:5050/api/searchPersonRole/?query=wel</a></td>
+        </tr>
+        <tr>
+          <td>GET a list of users with role field starts with "wel" and users' number = 1</td>
+          <td><a href = "/api/searchPersonRole/?query=wel&limit=1">127.0.0.1:5050/api/searchPersonRole/?query=wel&limit=1</a></td>
+        </tr>
+      </table>
+
 </body>
 </html>
